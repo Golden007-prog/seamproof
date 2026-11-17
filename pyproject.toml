@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seamproof"
+version = "0.1.0"
+description = "Make textures tile seamlessly - a whole PBR set at a time, with one shared fix and a measured seam score."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["numpy", "pillow"]
+authors = [{ name = "RakTikoo" }]
+keywords = ["texture", "seamless", "tiling", "pbr", "gamedev", "image-processing"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Graphics",
+]
+
+[project.scripts]
+seamproof = "seamproof.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/RakTikoo/seamproof"
+
+[tool.setuptools.packages.find]
+include = ["seamproof*"]
